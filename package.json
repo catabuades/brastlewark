@@ -2,11 +2,10 @@
   "name": "front-end",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "public/js/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:scss": "node-sass scss/styles.scss css/styles.css",
-    "builde:scss:watch": "node-sass scss/styles.scss css/styles.css --watch"
+    "build:scss": "node-sass src/scss/styles.scss public/css/styles.css",
+    "build:scss:watch": "node-sass src/scss/styles.scss public/css/styles.css --watch"
   },
   "author": "",
   "license": "ISC",
