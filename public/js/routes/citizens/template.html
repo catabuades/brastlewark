@@ -3,12 +3,6 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="#">Brastlewark</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -16,18 +10,19 @@
         <!-- /.container-fluid -->
     </nav>
 </header>
-<div class="container citizens">
+<div class="container-fluid citizens">
     <div class="row">
-        <div class="col-12 col-sm-4 col-md-4" ng-repeat='result in results'>
-            <div class="thumbnail">
+        <div class="filters col-12">
+            <h4>Resultados:</h4>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4" ng-repeat='result in results'>
+            <a href="#!/citizens/details/:id"><div class="thumbnail">
                 <div class="imageContainer">
                     <img ng-style="{'background-image':'url({{result.thumbnail}})'}" style="width:100%">
                 </div>
-                <div class="caption">
-                    <h3>{{result.name}}</h3>
-                    <p><a href="#" class="btn btn-default" role="button">Details</a></p>
-                </div>
-            </div>
+                <p class="nodecor">{{result.name}}</p>
+<!--                     <h5>{{result.name.surname}}</h5> -->
+            </div></a>
         </div>
     </div>
 </div>

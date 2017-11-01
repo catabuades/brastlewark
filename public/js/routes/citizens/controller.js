@@ -1,7 +1,7 @@
 /* global angular */
 
 angular.module('citizens-app')
-  .controller('resultsController', function ($scope, $routeParams, dataService) {
+  .controller('resultsController', function ($scope, $routeParams, dataService, utilsService) {
     var query = $routeParams.query
     var gender = ['Male', 'Female']
     dataService.getKeywordSearch()
@@ -12,37 +12,7 @@ angular.module('citizens-app')
             })
             console.log(data)
 
-            var a = data.reduce((acc, obj) => {
-              for (var i of obj.professions) {
-                if (!acc.includes(i)) {
-                  acc.push(i)
-                }
-              }
-
-              return acc
-            }, [])
-
-            var b = data.reduce((acc, obj) => {
-              if (!acc.includes(obj.hair_color)) {
-                acc.push(obj.hair_color)
-              }
-
-              return acc
-            }, [])
-
-            var c = data.reduce((acc, obj) => {
-              if (!acc.includes(obj.name)) {
-                acc.push(obj.name)
-              }
-
-              return acc
-            }, [])
-
-            dict = {
-              professions: a,
-              hair_color: b,
-              name: c
-            }
+            const dict = utilsService.getDictionary(data)
 
             console.log(dict)
             if (dict.name.includes(query)) {
@@ -51,10 +21,21 @@ angular.module('citizens-app')
             } else if (dict.professions.includes(query)) {
               console.log('entra professions')
               $scope.results = data.filter(obj => obj.professions.includes(query))
-            } else {
+            } else if (dict.hair_color.includes(query)) {
               console.log('entra colors')
               $scope.results = data.filter(obj => obj.hair_color === query)
+            } else if (dict.age.includes(query)) {
+              console.log('entra age')
+              $scope.results = data.filter(obj => obj.age === query)
+            } else {
+              console.log('entra gender')
+              $scope.results = data.filter(obj => obj.gender === query)
             }
+            // $scope.results = data.map(obj => {
+            //   obj.name = obj.name.split(' ')[0]
+            //   obj.name.surname = obj.name.split(' ')[1]
+            //   return obj
+            // })
             console.log($scope.results.length)
           })
   })
