@@ -1,14 +1,5 @@
 @import '_common';
-
-// $font-title: 'Montserrat', sans-serif;
-$font-title: 'Roboto', sans-serif;
-
-$blue: #535f7e;
-
-
-nav.navbar.navbar-default {
-	margin: 0px;
-}
+@import '_variables';
 
 .jumbotron {
 	background-color: white;
@@ -28,4 +19,31 @@ nav.navbar.navbar-default {
 		background-size: cover;
 		background-position: center;
 	}
+}
+
+/* CITIZENS */
+nav.navbar.navbar-default {
+	margin: 0px;
+	border-radius: 0px;
+}
+
+.container.citizens {
+	margin-top: 40px;
+}
+
+.thumbnail {
+	border-radius: 0px;
+	box-shadow: 10px 10px 5px 0px $blueRGBA;
+    // position: relative;
+    img {
+        height: 300px;
+        background-size: cover;
+        background-position: top center;
+        border: 0;
+    }
+}
+
+.imageContainer {
+    width: 100%;
+    margin-bottom: 20px;
 }

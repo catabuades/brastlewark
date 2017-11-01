@@ -3,11 +3,10 @@
 (function () {
   var urlSearch = 'https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json'
 
-  angular.module('tickets-app')
+  angular.module('citizens-app')
       .factory('dataService', function ($http) {
-        function getKeywordSearch (keyword) {
-          var url = urlSearch.replace('<%KEYWORD%>', keyword)
-          return $http.get(url)
+        function getKeywordSearch () {
+          return $http.get(urlSearch).then(info => info.data.Brastlewark)
         }
 
         return {

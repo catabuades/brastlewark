@@ -4,6 +4,7 @@ angular.module('citizens-app')
 .config(function ($routeProvider) {
   $routeProvider
   .when('/', {
-    templateUrl: 'js/routes/home/template.html'
+    templateUrl: 'js/routes/home/template.html',
+    controller: 'searchController'
   })
 })
