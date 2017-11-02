@@ -41,7 +41,7 @@
             </form>
         </div>
         <div class="col-12 col-sm-6 col-md-4" ng-repeat='result in results'>
-            <a href="#!/citizens/details/:id">
+            <a href="#!/citizens/details/{{result.id}}" ng-click="getDetails()">
                 <div class="thumbnail">
                     <div class="imageContainer">
                         <img ng-style="{'background-image':'url({{result.thumbnail}})'}" style="width:100%">
