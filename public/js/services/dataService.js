@@ -9,8 +9,13 @@
           return $http.get(urlSearch).then(info => info.data.Brastlewark)
         }
 
+        function getDetailsCitizen () {
+          return $http.get(urlSearch).then(info => info.data.Brastlewark)
+        }
+
         return {
-          getKeywordSearch: getKeywordSearch
+          getKeywordSearch: getKeywordSearch,
+          getDetailsCitizen: getDetailsCitizen
         }
       })
 })()

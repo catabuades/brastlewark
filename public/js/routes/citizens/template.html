@@ -1,11 +1,9 @@
 <header>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Brastlewark</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
         </div>
         <!-- /.container-fluid -->
     </nav>
@@ -13,16 +11,44 @@
 <div class="container-fluid citizens">
     <div class="row">
         <div class="filters col-12">
-            <h4>Resultados:</h4>
+            <h4>Search result: {{totalResults}} users</h4>
+            <h4 class="inline">Filters:</h4>
+            <form action="" class="inline">
+                <div class="inline">
+                    <p class="inline">Gender:</p>
+                    <select ng-class="{data: artists.length}" ng-model="artist" class="inline">
+                        <option value="{{ artist.id }}" ng-repeat="artist in artists">{{ artist.name }}</option>
+                    </select>
+                </div>
+                <div class="inline">
+                    <p class="inline">Profession:</p>
+                    <select ng-class="{data: artists.length}" ng-model="artist" class="inline">
+                        <option value="{{ artist.id }}" ng-repeat="artist in artists">{{ artist.name }}</option>
+                    </select>
+                </div>
+                <div class="inline">
+                    <p class="inline">Age:</p>
+                    <select ng-class="{data: artists.length}" ng-model="artist" class="inline">
+                        <option value="{{ artist.id }}" ng-repeat="artist in artists">{{ artist.name }}</option>
+                    </select>
+                </div>
+                <div class="inline">
+                    <p class="inline">Hair color:</p>
+                    <select ng-class="{data: artists.length}" ng-model="artist" class="inline">
+                        <option value="{{ artist.id }}" ng-repeat="artist in artists">{{ artist.name }}</option>
+                    </select>
+                </div>
+            </form>
         </div>
         <div class="col-12 col-sm-6 col-md-4" ng-repeat='result in results'>
-            <a href="#!/citizens/details/:id"><div class="thumbnail">
-                <div class="imageContainer">
-                    <img ng-style="{'background-image':'url({{result.thumbnail}})'}" style="width:100%">
+            <a href="#!/citizens/details/:id">
+                <div class="thumbnail">
+                    <div class="imageContainer">
+                        <img ng-style="{'background-image':'url({{result.thumbnail}})'}" style="width:100%">
+                    </div>
+                    <p class="nodecor">{{result.name}}</p>
                 </div>
-                <p class="nodecor">{{result.name}}</p>
-<!--                     <h5>{{result.name.surname}}</h5> -->
-            </div></a>
+            </a>
         </div>
     </div>
 </div>

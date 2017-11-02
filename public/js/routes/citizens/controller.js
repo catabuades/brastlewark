@@ -36,6 +36,8 @@ angular.module('citizens-app')
             //   obj.name.surname = obj.name.split(' ')[1]
             //   return obj
             // })
-            console.log($scope.results.length)
+
+            $scope.totalResults = $scope.results.length
+            // console.log($scope.results.length)
           })
   })

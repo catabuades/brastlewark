@@ -1,6 +1,10 @@
 @import '_common';
 @import '_variables';
 
+.inline {
+	display: inline;
+}
+
 .jumbotron {
     background-color: white;
     height: 800px;
@@ -45,20 +49,31 @@ nav.navbar.navbar-default {
     	padding-top: 15px;
     	padding-left: 15px;
     	min-height: 100px;
-        background-color: $blue;
+        background-color: #f8f8f8;
         h4 {
         	margin-top: 0px;
+        	margin-bottom: 10px;
             font-family: $roboto;
             font-weight: 300;
             font-size: 17px;
-            color: #FFF;
+            color: #927e76;
+        }
+        form {
+        	margin-left: 20px;
+        	font-family: $roboto;
+            font-weight: 300;
+            font-size: 14px;
+            color: #927e76;
+            select {
+            	margin-right: 20px;
+            }
         }
     }
     a {
         text-align: center;
         .thumbnail {
             border: none;
-            padding: 30px; // box-shadow: 10px 10px 5px 0px $blueRGBA;
+            padding: 40px; // box-shadow: 10px 10px 5px 0px $blueRGBA;
             // position: relative;
             .imageContainer {
                 margin: 0 auto;
@@ -83,16 +98,31 @@ nav.navbar.navbar-default {
                 margin: auto;
                 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
                 font-size: 20px;
-                font-weight: 200px;
+                font-weight: 400;
             }
             p:hover {
                 background-color: $blueRGBA;
-                border-radius: 3px;
+                border-radius: 0px;
                 color: #FFF;
             }
         }
     }
     a:hover {
         text-decoration: none;
+    }
+}
+
+.detailsCitizen {
+    margin-top: 40px;
+    div.panel {
+        border-radius: 0px;
+    }
+    div.panel-heading {
+        background-color: $blue;
+        color: #FFF;
+        border-radius: 0px;
+    }
+    div.panel-body {
+        border-radius: 0px;
     }
 }

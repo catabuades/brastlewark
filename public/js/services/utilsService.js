@@ -30,7 +30,7 @@ angular.module('citizens-app')
       }, [])
 
       var age = data.reduce((acc, obj) => {
-        if (!acc.includes(obj.name)) {
+        if (!acc.includes(obj.age)) {
           acc.push(obj.age)
         }
 
