@@ -3,7 +3,9 @@
 
 .jumbotron {
   background-color: white;
-  height: 800px; }
+  min-height: 700px;
+  margin-bottom: 0;
+  padding-bottom: 0; }
   .jumbotron h1 {
     font-family: "Roboto", sans-serif;
     font-weight: 900;
@@ -88,8 +90,12 @@ nav.navbar.navbar-default {
   text-decoration: none; }
 
 .detailsCitizen {
-  margin-top: 40px; }
+  background-image: url("../img/smartcity.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 700px; }
   .detailsCitizen div.panel {
+    margin-top: 40px;
     border-radius: 0px; }
   .detailsCitizen div.panel-heading {
     background-color: #535f7e;
@@ -97,3 +103,19 @@ nav.navbar.navbar-default {
     border-radius: 0px; }
   .detailsCitizen div.panel-body {
     border-radius: 0px; }
+    .detailsCitizen div.panel-body div.imageContainer {
+      margin: 0 auto;
+      margin-bottom: 20px;
+      min-height: 250px;
+      min-width: 250px;
+      max-height: 250px;
+      max-width: 250px; }
+      .detailsCitizen div.panel-body div.imageContainer img {
+        min-height: 250px;
+        min-width: 250px;
+        max-height: 250px;
+        max-width: 250px;
+        background-size: cover;
+        background-position: top center;
+        border-radius: 50%;
+        /*             margin-top: auto; */ }

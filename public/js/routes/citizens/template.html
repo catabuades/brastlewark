@@ -15,36 +15,36 @@
             <h4 class="inline">Filters:</h4>
             <form action="" class="inline">
                 <div class="inline">
+                    <p class="inline">Name:</p>
+                    <input ng-change="changeName()" ng-model="name" type="text" id="names">
+                </div>
+                <div class="inline">
                     <p class="inline">Gender:</p>
-                    <select ng-class="{data: artists.length}" ng-model="artist" class="inline">
-                        <option value="{{ artist.id }}" ng-repeat="artist in artists">{{ artist.name }}</option>
+                    <select ng-change="changeGender()" ng-model="gender" class="inline">
+                        <option ng-repeat="gender in genders">{{ gender }}</option>
                     </select>
                 </div>
                 <div class="inline">
                     <p class="inline">Profession:</p>
-                    <select ng-class="{data: artists.length}" ng-model="artist" class="inline">
-                        <option value="{{ artist.id }}" ng-repeat="artist in artists">{{ artist.name }}</option>
-                    </select>
+                    <input ng-change="changeProfession()" ng-model="professions" type="text" id="professions">
                 </div>
                 <div class="inline">
                     <p class="inline">Age:</p>
-                    <select ng-class="{data: artists.length}" ng-model="artist" class="inline">
-                        <option value="{{ artist.id }}" ng-repeat="artist in artists">{{ artist.name }}</option>
-                    </select>
+                    <input ng-change="changeAge()" ng-model="age" type="text" id="ages">
                 </div>
                 <div class="inline">
                     <p class="inline">Hair color:</p>
-                    <select ng-class="{data: artists.length}" ng-model="artist" class="inline">
-                        <option value="{{ artist.id }}" ng-repeat="artist in artists">{{ artist.name }}</option>
+                    <select ng-change="changeColor()" ng-model="color" class="inline">
+                        <option ng-repeat="color in colors">{{ color }}</option>
                     </select>
                 </div>
             </form>
         </div>
-        <div class="col-12 col-sm-6 col-md-4" ng-repeat='result in results'>
+        <div class="col-12 col-sm-6 col-md-4" ng-repeat='result in results track by $index'>
             <a href="#!/citizens/details/{{result.id}}" ng-click="getDetails()">
                 <div class="thumbnail">
                     <div class="imageContainer">
-                        <img ng-style="{'background-image':'url({{result.thumbnail}})'}" style="width:100%">
+                        <img style="background-image:url({{result.thumbnail}}); width:100%">
                     </div>
                     <p class="nodecor">{{result.name}}</p>
                 </div>

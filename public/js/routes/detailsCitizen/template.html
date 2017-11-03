@@ -13,10 +13,25 @@
         <div class="col-12 col-sm-8 col-sm-offset-2">
             <div class="panel">
                 <div class="panel-heading">
-                    <h3 class="panel-title">{{data.name}}</h3>
+                    <h3 class="panel-title">{{citizen[0].name}}</h3>
                 </div>
-                <div class="panel-body">
-                    
+                <div class="panel-body row">
+                    <div class="col-12 col-sm-4 imageContainer">
+                        <img style="background-image:url({{citizen[0].thumbnail}});width:100%;">
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <h6 class="inline">Age:</h6>
+                        <p>{{citizen[0].age}}</p>
+                        <h6 class="inline">Hair color:</h6>
+                        <p>{{citizen[0].hair_color}}</p>
+                        <h6 class="inline">Height</h6>
+                        <p>{{citizen[0].height}}</p>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <ul ng-repeat="friend in friends">
+                            <li>{{ friend }}</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

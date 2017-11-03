@@ -1,43 +1,67 @@
 /* global angular */
 
 angular.module('citizens-app')
-  .controller('resultsController', function ($scope, $routeParams, dataService, utilsService) {
-    var query = $routeParams.query
-    var gender = ['Male', 'Female']
-    dataService.getKeywordSearch()
-          .then(data => {
-            data = data.map(obj => {
-              obj.gender = gender[(Math.floor((Math.random() * 2) + 1)) - 1]
-              return obj
+    .controller('resultsController', function ($scope, $routeParams, dataService, utilsService) {
+      const query = $routeParams.query
+      $scope.genders = ['Male', 'Female']
+      let dataInfo
+      dataService.getKeywordSearch()
+            .then(data => {
+              dataInfo = data
+              data = data.map(obj => {
+                obj.gender = $scope.genders[(Math.floor((Math.random() * 2) + 1)) - 1]
+                return obj
+              })
+
+              const dict = utilsService.getDictionary(data)
+              angular.element(document).ready(function () {
+                const availableTags = dict.professions
+                $('#professions').autocomplete({ source: availableTags })
+                const availableNames = dict.name
+                $('#names').autocomplete({ source: availableNames })
+                const availableAges = dict.age.map(age => age.toString())
+                $('#ages').autocomplete({ source: availableAges })
+              })
+
+              $scope.colors = dict.hair_color
+
+              if (dict.name.includes(query)) {
+                $scope.results = data.filter(obj => obj.name === query)
+              } else if (dict.professions.includes(query)) {
+                $scope.results = data.filter(obj => obj.professions.includes(query))
+              } else if (dict.hair_color.includes(query)) {
+                $scope.results = data.filter(obj => obj.hair_color === query)
+              } else if (dict.age.includes(query)) {
+                $scope.results = data.filter(obj => obj.age === query)
+              } else {
+                $scope.results = data.filter(obj => obj.gender === query)
+              }
+
+              $scope.totalResults = $scope.results.length
             })
-            console.log(data)
 
-            const dict = utilsService.getDictionary(data)
+      $scope.changeColor = function () {
+        $scope.results = dataInfo.filter(obj => obj.hair_color === $scope.color)
+        $scope.totalResults = $scope.results.length
+      }
 
-            console.log(dict)
-            if (dict.name.includes(query)) {
-              console.log('entra name')
-              $scope.results = data.filter(obj => obj.name === query)
-            } else if (dict.professions.includes(query)) {
-              console.log('entra professions')
-              $scope.results = data.filter(obj => obj.professions.includes(query))
-            } else if (dict.hair_color.includes(query)) {
-              console.log('entra colors')
-              $scope.results = data.filter(obj => obj.hair_color === query)
-            } else if (dict.age.includes(query)) {
-              console.log('entra age')
-              $scope.results = data.filter(obj => obj.age === query)
-            } else {
-              console.log('entra gender')
-              $scope.results = data.filter(obj => obj.gender === query)
-            }
-            // $scope.results = data.map(obj => {
-            //   obj.name = obj.name.split(' ')[0]
-            //   obj.name.surname = obj.name.split(' ')[1]
-            //   return obj
-            // })
+      $scope.changeGender = function () {
+        $scope.results = dataInfo.filter(obj => obj.gender === $scope.gender)
+        $scope.totalResults = $scope.results.length
+      }
 
-            $scope.totalResults = $scope.results.length
-            // console.log($scope.results.length)
-          })
-  })
+      $scope.changeAge = function () {
+        $scope.results = dataInfo.filter(obj => obj.age == $scope.age)
+        $scope.totalResults = $scope.results.length
+      }
+
+      $scope.changeProfession = function () {
+        $scope.results = dataInfo.filter(obj => obj.professions == $scope.professions)
+        $scope.totalResults = $scope.results.length
+      }
+
+      $scope.changeName = function () {
+        $scope.results = dataInfo.filter(obj => obj.name === $scope.name)
+        $scope.totalResults = $scope.results.length
+      }
+    })

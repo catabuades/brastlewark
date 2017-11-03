@@ -1,0 +1,12 @@
+{		
+	"name": "infinite-autocomplete",		
+	"description": "Bower Package for infinite-autocomplete",		
+	"main": "./dist/index.js",		
+    "author": "Islam Attrash",
+	"license": "MIT",		
+	"homepage": "https://github.com/Attrash-Islam/bower-infinite-autocomplete.git",		
+	"repository": {		
+		"type": "git",		
+		"url": "git://github.com/Attrash-Islam/bower-infinite-autocomplete.git"		
+	}		
+}

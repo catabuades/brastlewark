@@ -1,0 +1,20 @@
+{
+  "name": "front-end",
+  "description": "",
+  "main": "public/js/app.js",
+  "authors": [
+    "Cata Buades <catabuades@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/catabuades/brastlewark",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "infinite-autocomplete": "^2.2.0"
+  }
+}

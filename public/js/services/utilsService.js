@@ -3,7 +3,7 @@
 angular.module('citizens-app')
   .factory('utilsService', function (dataService) {
     function getDictionary (data) {
-      var professions = data.reduce((acc, obj) => {
+      const professions = data.reduce((acc, obj) => {
         for (var i of obj.professions) {
           if (!acc.includes(i)) {
             acc.push(i)
@@ -13,7 +13,7 @@ angular.module('citizens-app')
         return acc
       }, [])
 
-      var hair_color = data.reduce((acc, obj) => {
+      const hair_color = data.reduce((acc, obj) => {
         if (!acc.includes(obj.hair_color)) {
           acc.push(obj.hair_color)
         }
@@ -21,7 +21,7 @@ angular.module('citizens-app')
         return acc
       }, [])
 
-      var name = data.reduce((acc, obj) => {
+      const name = data.reduce((acc, obj) => {
         if (!acc.includes(obj.name)) {
           acc.push(obj.name)
         }
@@ -29,7 +29,7 @@ angular.module('citizens-app')
         return acc
       }, [])
 
-      var age = data.reduce((acc, obj) => {
+      const age = data.reduce((acc, obj) => {
         if (!acc.includes(obj.age)) {
           acc.push(obj.age)
         }
@@ -37,7 +37,7 @@ angular.module('citizens-app')
         return acc
       }, [])
 
-      var gender = data.reduce((acc, obj) => {
+      const gender = data.reduce((acc, obj) => {
         if (!acc.includes(obj.gender)) {
           acc.push(obj.gender)
         }

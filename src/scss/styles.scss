@@ -2,12 +2,14 @@
 @import '_variables';
 
 .inline {
-	display: inline;
+    display: inline;
 }
 
 .jumbotron {
     background-color: white;
-    height: 800px;
+    min-height: 700px;
+    margin-bottom: 0;
+    padding-bottom: 0;
     h1 {
         font-family: $roboto;
         font-weight: 900;
@@ -20,11 +22,13 @@
     }
     .jumbotron {
         margin-top: 40px;
-        background-image: url("../img/smartcity.png");
+        background-image: $city;
         background-size: cover;
         background-position: center;
     }
 }
+
+
 
 
 
@@ -46,26 +50,26 @@ nav.navbar.navbar-default {
 
 .citizens {
     div.filters {
-    	padding-top: 15px;
-    	padding-left: 15px;
-    	min-height: 100px;
+        padding-top: 15px;
+        padding-left: 15px;
+        min-height: 100px;
         background-color: #f8f8f8;
         h4 {
-        	margin-top: 0px;
-        	margin-bottom: 10px;
+            margin-top: 0px;
+            margin-bottom: 10px;
             font-family: $roboto;
             font-weight: 300;
             font-size: 17px;
             color: #927e76;
         }
         form {
-        	margin-left: 20px;
-        	font-family: $roboto;
+            margin-left: 20px;
+            font-family: $roboto;
             font-weight: 300;
             font-size: 14px;
             color: #927e76;
             select {
-            	margin-right: 20px;
+                margin-right: 20px;
             }
         }
     }
@@ -113,8 +117,12 @@ nav.navbar.navbar-default {
 }
 
 .detailsCitizen {
-    margin-top: 40px;
+    background-image: $city;
+    background-size: cover;
+    background-position: center;
+    min-height: 700px;
     div.panel {
+        margin-top: 40px;
         border-radius: 0px;
     }
     div.panel-heading {
@@ -124,5 +132,23 @@ nav.navbar.navbar-default {
     }
     div.panel-body {
         border-radius: 0px;
+        div.imageContainer {
+            margin: 0 auto;
+            margin-bottom: 20px; // border-radius: 50%;
+            min-height: 250px;
+            min-width: 250px;
+            max-height: 250px;
+            max-width: 250px;
+            img {
+                min-height: 250px;
+                min-width: 250px;
+                max-height: 250px;
+                max-width: 250px;
+                background-size: cover;
+                background-position: top center;
+                border-radius: 50%;
+                /*             margin-top: auto; */
+            }
+        }
     }
 }
