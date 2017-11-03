@@ -14,25 +14,25 @@
             <h4>Search result: {{totalResults}} users</h4>
             <h4 class="inline">Filters:</h4>
             <form action="" class="inline">
-                <div class="inline">
+                <div class="inline-left">
                     <p class="inline">Name:</p>
                     <input ng-change="changeName()" ng-model="name" type="text" id="names">
                 </div>
-                <div class="inline">
+                <div class="inline-left">
                     <p class="inline">Gender:</p>
                     <select ng-change="changeGender()" ng-model="gender" class="inline">
                         <option ng-repeat="gender in genders">{{ gender }}</option>
                     </select>
                 </div>
-                <div class="inline">
+                <div class="inline-left">
                     <p class="inline">Profession:</p>
                     <input ng-change="changeProfession()" ng-model="professions" type="text" id="professions">
                 </div>
-                <div class="inline">
+                <div class="inline-left">
                     <p class="inline">Age:</p>
                     <input ng-change="changeAge()" ng-model="age" type="text" id="ages">
                 </div>
-                <div class="inline">
+                <div class="inline-left">
                     <p class="inline">Hair color:</p>
                     <select ng-change="changeColor()" ng-model="color" class="inline">
                         <option ng-repeat="color in colors">{{ color }}</option>

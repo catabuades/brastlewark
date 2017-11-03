@@ -1,6 +1,14 @@
+/* FONTS */
+/* COLORS */
+/* IMAGE BACKGROUND */
 .inline {
   display: inline; }
 
+.inline-left {
+  display: inline;
+  margin-left: 20px; }
+
+/* SEARCHER PAGE STYLES */
 .jumbotron {
   background-color: white;
   min-height: 700px;
@@ -20,7 +28,7 @@
     background-size: cover;
     background-position: center; }
 
-/* CITIZENS */
+/* CITIZENS RESULT STYLES */
 nav.navbar.navbar-default {
   margin: 0px;
   border-radius: 0px;
@@ -35,12 +43,12 @@ nav.navbar.navbar-default {
 
 .citizens div.filters {
   padding-top: 15px;
-  padding-left: 15px;
   min-height: 100px;
   background-color: #f8f8f8; }
   .citizens div.filters h4 {
     margin-top: 0px;
     margin-bottom: 10px;
+    margin-left: 15px;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-size: 17px;
@@ -89,6 +97,7 @@ nav.navbar.navbar-default {
 .citizens a:hover {
   text-decoration: none; }
 
+/* USERS CARD STYLES */
 .detailsCitizen {
   background-image: url("../img/smartcity.png");
   background-size: cover;
@@ -101,6 +110,10 @@ nav.navbar.navbar-default {
     background-color: #535f7e;
     color: #FFF;
     border-radius: 0px; }
+    .detailsCitizen div.panel-heading h3 {
+      letter-spacing: 3px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400; }
   .detailsCitizen div.panel-body {
     border-radius: 0px; }
     .detailsCitizen div.panel-body div.imageContainer {
@@ -119,3 +132,23 @@ nav.navbar.navbar-default {
         background-position: top center;
         border-radius: 50%;
         /*             margin-top: auto; */ }
+    .detailsCitizen div.panel-body h6 {
+      padding-left: 40px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 17px; }
+    .detailsCitizen div.panel-body h6.h6-right {
+      padding-left: 0px; }
+    .detailsCitizen div.panel-body p {
+      padding-left: 60px;
+      padding-bottom: 30px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 17px; }
+    .detailsCitizen div.panel-body ul {
+      list-style: none;
+      padding-left: 20px; }
+      .detailsCitizen div.panel-body ul li {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 17px; }

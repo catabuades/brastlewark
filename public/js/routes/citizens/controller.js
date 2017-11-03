@@ -1,5 +1,9 @@
 /* global angular */
 
+/* Controller en el qual guardo la query en una variable para después hacer la comparación de la query con el
+diccionario que he creado en un principio. Además creo los valores Male y Female, para asignarselos a los usuarios
+de forma aleatoria. */
+
 angular.module('citizens-app')
     .controller('resultsController', function ($scope, $routeParams, dataService, utilsService) {
       const query = $routeParams.query
@@ -13,6 +17,9 @@ angular.module('citizens-app')
                 return obj
               })
 
+/* El diccionario también me sirve para poder aplicar los filtros, de éste modo cada filtro esta asigando a
+una propiedad, que contiene un objeto con todos los valores */
+
               const dict = utilsService.getDictionary(data)
               angular.element(document).ready(function () {
                 const availableTags = dict.professions
@@ -24,6 +31,10 @@ angular.module('citizens-app')
               })
 
               $scope.colors = dict.hair_color
+
+/* Condiciones que se recorren para comparar la query introducida en el buscador principal con los valores del
+objeto de la propiedad, si no coincide, pasa a la siguiente propiedad, hasta que se produce el match y entonces
+devuelve el resultado con los usuarios que contienen la palabra clave */
 
               if (dict.name.includes(query)) {
                 $scope.results = data.filter(obj => obj.name === query)
@@ -39,6 +50,8 @@ angular.module('citizens-app')
 
               $scope.totalResults = $scope.results.length
             })
+
+/* Cuando se capta el change, se lanza la función para aplicar el filtro de cada propiedad */
 
       $scope.changeColor = function () {
         $scope.results = dataInfo.filter(obj => obj.hair_color === $scope.color)

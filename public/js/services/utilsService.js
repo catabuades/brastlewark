@@ -1,5 +1,10 @@
 /* global angular */
 
+/* Para poder hacer las comparaciones del query en la búsqueda, me he servido de un diccionario.
+De éste modo, recorro la array de objetos, los quales tienen X propiedades. Recorro cada objeto, y si la propiedad
+que lée ya ha sido sumada al contador pasa a la siguiente, y sino la suma, de este modo, cada vez que encuentra una
+nueva propiedad esta se suma a un objeto y creo el diccionario */
+
 angular.module('citizens-app')
   .factory('utilsService', function (dataService) {
     function getDictionary (data) {
