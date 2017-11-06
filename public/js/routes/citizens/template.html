@@ -10,35 +10,41 @@
 </header>
 <div class="container-fluid citizens">
     <div class="row">
-        <div class="filters col-12">
+        <div class="filters">
             <h4>Search result: {{totalResults}} users</h4>
-            <h4 class="inline">Filters:</h4>
-            <form action="" class="inline">
-                <div class="inline-left">
-                    <p class="inline">Name:</p>
-                    <input ng-change="changeName()" ng-model="name" type="text" id="names">
-                </div>
-                <div class="inline-left">
-                    <p class="inline">Gender:</p>
-                    <select ng-change="changeGender()" ng-model="gender" class="inline">
-                        <option ng-repeat="gender in genders">{{ gender }}</option>
-                    </select>
-                </div>
-                <div class="inline-left">
-                    <p class="inline">Profession:</p>
-                    <input ng-change="changeProfession()" ng-model="professions" type="text" id="professions">
-                </div>
-                <div class="inline-left">
-                    <p class="inline">Age:</p>
-                    <input ng-change="changeAge()" ng-model="age" type="text" id="ages">
-                </div>
-                <div class="inline-left">
-                    <p class="inline">Hair color:</p>
-                    <select ng-change="changeColor()" ng-model="color" class="inline">
-                        <option ng-repeat="color in colors">{{ color }}</option>
-                    </select>
-                </div>
-            </form>
+            <div class="row">
+                <h4 class="inline col-12 col-md-1">Filters:</h4>
+                <form action="" class="col-12 col-md-11">
+                    <div class="container">
+                        <div class="row">
+                            <div class="inline-left">
+                                <p class="inline">Name:</p>
+                                <input ng-change="changeName()" ng-model="name" type="text" id="names">
+                            </div>
+                            <div class="inline-left">
+                                <p class="inline">Profession:</p>
+                                <input ng-change="changeProfession()" ng-model="professions" type="text" id="professions">
+                            </div>
+                            <div class="inline-left">
+                                <p class="inline">Age:</p>
+                                <input ng-change="changeAge()" ng-model="age" type="text" id="ages">
+                            </div>
+                            <div class="inline-left">
+                                <p class="inline">Gender:</p>
+                                <select ng-change="changeGender()" ng-model="gender" class="inline">
+                                    <option ng-repeat="gender in genders">{{ gender }}</option>
+                                </select>
+                            </div>
+                            <div class="inline-left">
+                                <p class="inline">Hair color:</p>
+                                <select ng-change="changeColor()" ng-model="color" class="inline">
+                                    <option ng-repeat="color in colors">{{ color }}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4" ng-repeat='result in results track by $index'>
             <a href="#!/citizens/details/{{result.id}}" ng-click="getDetails()">

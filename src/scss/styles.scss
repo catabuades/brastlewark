@@ -8,7 +8,6 @@
 
 .inline-left {
     display: inline;
-    margin-left: 20px;
 }
 
 /* SEARCHER PAGE STYLES */
@@ -169,7 +168,7 @@ nav.navbar.navbar-default {
             font-size: 17px;
         }
         h6.h6-right {
-                padding-left: 0px;
+                padding-left: 40px;
             }
         p {
             padding-left: 60px;
@@ -180,11 +179,12 @@ nav.navbar.navbar-default {
         }
         ul {
             list-style: none;
-            padding-left: 20px;
+            padding-left: 40px;
             li {
                 font-family: $helvetica;
                 font-weight: 400;
                 font-size: 17px;
+                padding-left: 20px;
             }
         }
     }

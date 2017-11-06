@@ -6,7 +6,10 @@ de forma aleatoria. */
 
 angular.module('citizens-app')
     .controller('resultsController', function ($scope, $routeParams, dataService, utilsService) {
-      const query = $routeParams.query
+      const re = /(\b[a-z](?!\s))/g
+      const query = $routeParams.query.replace(re, function (x) { return x.toUpperCase() })
+      console.log(query)
+
       $scope.genders = ['Male', 'Female']
       let dataInfo
       dataService.getKeywordSearch()
@@ -17,8 +20,8 @@ angular.module('citizens-app')
                 return obj
               })
 
-/* El diccionario también me sirve para poder aplicar los filtros, de éste modo cada filtro esta asigando a
-una propiedad, que contiene un objeto con todos los valores */
+                /* El diccionario también me sirve para poder aplicar los filtros, de éste modo cada filtro esta asigando a
+                una propiedad, que contiene un objeto con todos los valores */
 
               const dict = utilsService.getDictionary(data)
               angular.element(document).ready(function () {
@@ -32,9 +35,9 @@ una propiedad, que contiene un objeto con todos los valores */
 
               $scope.colors = dict.hair_color
 
-/* Condiciones que se recorren para comparar la query introducida en el buscador principal con los valores del
-objeto de la propiedad, si no coincide, pasa a la siguiente propiedad, hasta que se produce el match y entonces
-devuelve el resultado con los usuarios que contienen la palabra clave */
+                /* Condiciones que se recorren para comparar la query introducida en el buscador principal con los valores del
+                objeto de la propiedad, si no coincide, pasa a la siguiente propiedad, hasta que se produce el match y entonces
+                devuelve el resultado con los usuarios que contienen la palabra clave */
 
               if (dict.name.includes(query)) {
                 $scope.results = data.filter(obj => obj.name === query)
@@ -51,7 +54,7 @@ devuelve el resultado con los usuarios que contienen la palabra clave */
               $scope.totalResults = $scope.results.length
             })
 
-/* Cuando se capta el change, se lanza la función para aplicar el filtro de cada propiedad */
+        /* Cuando se capta el change, se lanza la función para aplicar el filtro de cada propiedad */
 
       $scope.changeColor = function () {
         $scope.results = dataInfo.filter(obj => obj.hair_color === $scope.color)

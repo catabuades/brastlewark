@@ -5,8 +5,7 @@
   display: inline; }
 
 .inline-left {
-  display: inline;
-  margin-left: 20px; }
+  display: inline; }
 
 /* SEARCHER PAGE STYLES */
 .jumbotron {
@@ -138,7 +137,7 @@ nav.navbar.navbar-default {
       font-weight: 800;
       font-size: 17px; }
     .detailsCitizen div.panel-body h6.h6-right {
-      padding-left: 0px; }
+      padding-left: 40px; }
     .detailsCitizen div.panel-body p {
       padding-left: 60px;
       padding-bottom: 30px;
@@ -147,8 +146,9 @@ nav.navbar.navbar-default {
       font-size: 17px; }
     .detailsCitizen div.panel-body ul {
       list-style: none;
-      padding-left: 20px; }
+      padding-left: 40px; }
       .detailsCitizen div.panel-body ul li {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-weight: 400;
-        font-size: 17px; }
+        font-size: 17px;
+        padding-left: 20px; }
