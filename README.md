@@ -7,7 +7,7 @@
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 # [Brastlewark](nimble-boy.surge.sh)
-Brastlewark és un buscador de la ciudad, responsive, en el cual puedes encontrar los habitantes de la ciudad y ver su descripción en una ficha.
+Find who you want! Just look for a name, color, gender or profession. The people of Brastlewark town are here!
 ---
 
 ## Installation
