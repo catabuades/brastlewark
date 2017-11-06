@@ -42,10 +42,13 @@ http-server
 
 - SASS & NODE-SASS
     For the styles I have used Sass, because styles can be nested, it is more semantic and faster.
+
 - ANGULAR 1.6
 - ES6
     ES6 is more syntactic. The const and let are stricter against errors, and more optimal than the var. With the use of the arrow function I have omitted the bind.
-    
+
+-JQUERY 
+
 - BOOTSTRAP
     For the layout I have used Bootstrap, because using the columns in an appropriate way, the responsive is generated.
 

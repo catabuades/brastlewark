@@ -6,11 +6,10 @@
     display: inline;
 }
 
-.inline-left {
-    display: inline;
-}
+
 
 /* SEARCHER PAGE STYLES */
+
 .jumbotron {
     background-color: white;
     min-height: 700px;
@@ -21,7 +20,7 @@
         font-weight: 900;
         text-align: center;
         color: $blue;
-        font-size: 80px;
+        font-size: 69px;
     }
     p {
         text-align: center;
@@ -33,6 +32,8 @@
         background-position: center;
     }
 }
+
+
 
 
 
@@ -55,6 +56,7 @@ nav.navbar.navbar-default {
 .citizens {
     div.filters {
         padding-top: 15px;
+        padding-bottom: 10px;
         min-height: 100px;
         background-color: $gray-light;
         h4 {
@@ -72,8 +74,9 @@ nav.navbar.navbar-default {
             font-weight: 300;
             font-size: 14px;
             color: $gray-dark;
-            select {
-                margin-right: 20px;
+            div.inline-block {
+                margin-left: 10px;
+                display: inline-block;
             }
         }
     }
@@ -119,6 +122,8 @@ nav.navbar.navbar-default {
         text-decoration: none;
     }
 }
+
+
 
 /* USERS CARD STYLES */
 
@@ -168,8 +173,8 @@ nav.navbar.navbar-default {
             font-size: 17px;
         }
         h6.h6-right {
-                padding-left: 40px;
-            }
+            padding-left: 40px;
+        }
         p {
             padding-left: 60px;
             padding-bottom: 30px;

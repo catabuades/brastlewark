@@ -4,9 +4,6 @@
 .inline {
   display: inline; }
 
-.inline-left {
-  display: inline; }
-
 /* SEARCHER PAGE STYLES */
 .jumbotron {
   background-color: white;
@@ -18,7 +15,7 @@
     font-weight: 900;
     text-align: center;
     color: #535f7e;
-    font-size: 80px; }
+    font-size: 69px; }
   .jumbotron p {
     text-align: center; }
   .jumbotron .jumbotron {
@@ -42,6 +39,7 @@ nav.navbar.navbar-default {
 
 .citizens div.filters {
   padding-top: 15px;
+  padding-bottom: 10px;
   min-height: 100px;
   background-color: #f8f8f8; }
   .citizens div.filters h4 {
@@ -58,8 +56,9 @@ nav.navbar.navbar-default {
     font-weight: 300;
     font-size: 14px;
     color: #927e76; }
-    .citizens div.filters form select {
-      margin-right: 20px; }
+    .citizens div.filters form div.inline-block {
+      margin-left: 10px;
+      display: inline-block; }
 
 .citizens a {
   text-align: center; }
