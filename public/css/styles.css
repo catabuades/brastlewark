@@ -60,6 +60,23 @@ nav.navbar.navbar-default {
       margin-left: 10px;
       display: inline-block; }
 
+.citizens div.eventNotFound h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 200px;
+  color: #535f7e;
+  margin-top: 50px;
+  text-align: center; }
+
+.citizens div.eventNotFound h3 {
+  letter-spacing: 3px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #535f7e;
+  margin-top: 20px;
+  text-align: center; }
+
 .citizens a {
   text-align: center; }
   .citizens a .thumbnail {

@@ -50,6 +50,10 @@
                 </form>
             </div>
         </div>
+         <div class="eventNotFound col-12" ng-if="found">
+            <h2>!</h2>
+            <h3>NO MATCHES FOUND</h3>
+        </div>
         <div class="col-12 col-sm-6 col-md-4" ng-repeat='result in results track by $index'>
             <a href="#!/citizens/details/{{result.id}}" ng-click="getDetails()">
                 <div class="thumbnail">

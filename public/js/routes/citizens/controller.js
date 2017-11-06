@@ -51,6 +51,7 @@ angular.module('citizens-app')
                 $scope.results = data.filter(obj => obj.gender === query)
               }
 
+              $scope.found = $scope.results.length === 0
               $scope.totalResults = $scope.results.length
             })
 

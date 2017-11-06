@@ -8,6 +8,10 @@
 
 
 
+
+
+
+
 /* SEARCHER PAGE STYLES */
 
 .jumbotron {
@@ -32,6 +36,10 @@
         background-position: center;
     }
 }
+
+
+
+
 
 
 
@@ -80,6 +88,25 @@ nav.navbar.navbar-default {
             }
         }
     }
+    div.eventNotFound {
+        h2 {
+            font-family: $roboto;
+            font-weight: 900;
+            font-size: 200px;
+            color: $blue;
+            margin-top: 50px;
+            text-align: center;
+        }
+        h3 {
+            letter-spacing: 3px;
+            font-family: $roboto;
+            font-weight: 400;
+            font-size: 40px;
+            color: $blue;
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
     a {
         text-align: center;
         .thumbnail {
@@ -122,6 +149,10 @@ nav.navbar.navbar-default {
         text-decoration: none;
     }
 }
+
+
+
+
 
 
 
