@@ -6,7 +6,7 @@
 [![SASS](https://github.com/FransLopez/logo-images/blob/master/logos/sass.png)](http://sass-lang.com/)
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-# [Brastlewark](nimble-boy.surge.sh)
+# [Brastlewark](http://brastlewark.surge.sh/#!/)
 Find who you want! Just look for a name, color, gender or profession. The people of Brastlewark town are here!
 ---
 
